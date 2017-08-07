@@ -8,7 +8,7 @@
  */
 
 include('./parameters.php');
-$bdd = new Bdd();
+$bdd_parameters = new Bdd();
 
 if ( ! function_exists( 'relache_setup' ) ) :
 /**
@@ -218,9 +218,9 @@ require get_template_directory() . '/inc/jetpack.php';
 
     function connection(){
 
-        $dsn = $bdd->getDsn();//serveur et base de données
-        $user = $bdd->getUser(); //login
-        $password = $bdd->getPassword(); // mot de passe
+        $dsn = $bdd_parameters->getDsn();//serveur et base de données
+        $user = $bdd_parameters->getUser(); //login
+        $password = $bdd_parameters->getPassword(); // mot de passe
 
         try{
 
