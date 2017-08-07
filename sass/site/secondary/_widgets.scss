@@ -1,0 +1,63 @@
+.widget {
+	margin: 0 0 1em;
+	font-family: 'Noto Sans';
+	font-size: 1rem;
+
+	a {
+		font-weight: 700;
+		color: black;
+	}
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+
+	ul,
+	ol {
+		padding: 0;
+		margin: -1em 0 0;
+		list-style-type: none;
+	}
+
+	li {
+		padding: 1em 0 0;
+
+		ul,
+		ol {margin-top: 0;}
+
+		li {margin-left: 1.5em;}
+	}
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+	display: none;
+}
+
+.widget-title {
+	margin-bottom: 1em;
+	font-size: 1rem;
+	border-bottom: 2px solid black;
+}
+
+.widget_calendar {
+	th,
+	td {text-align: center;}
+}
+
+.footer-widgets {
+	margin: 0 auto;
+
+	.widget-title,
+	.widget a:hover {
+		color: white;
+		border-color: white;
+	}
+
+	.widget {
+		float: left;
+		width: 320px;
+		margin: 0 4rem 8rem 4rem;
+	}
+}

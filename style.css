@@ -1,0 +1,1931 @@
+/*!
+Theme Name: Relache
+Theme URI: http://notavailableyet.com/
+Author: Bernard Pagoaga, Robin Clidi, Thierry Sebaici
+Author URI: http://bernardpagoaga.net, http://robinclidi.com, http://thierrysebaici.free.fr;
+Description: Fully responsive custom theme, using 6 static pages and a blog.
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: seelater
+Tags: responsive-layout, two-columns, white, black, red, blue, yellow
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+sass is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Header
+# Footer
+# Widgets
+# Content
+    ## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*==================*
+ *   BACKGROUND     *
+ *==================*/
+/*==================*
+ *       TEXT       *
+ *==================*/
+/*==================*
+ *      BORDER      *
+ *==================*/
+/*====================*
+ *     FONT-SIZE      *
+ *====================*/
+/*====================*
+ *    FONT-FAMILY     *
+ *====================*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* line 1, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* line 7, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+body {
+  margin: 0; }
+
+/* line 22, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+  display: block; }
+
+/* line 29, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+/* line 34, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 40, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+[hidden], template {
+  display: none; }
+
+/* line 44, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+a {
+  background-color: transparent; }
+
+/* line 49, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+a:active, a:hover {
+  outline: 0; }
+
+/* line 53, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 58, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+b, strong {
+  font-weight: bold; }
+
+/* line 62, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+dfn {
+  font-style: italic; }
+
+/* line 66, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* line 71, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/* line 76, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+small {
+  font-size: 80%; }
+
+/* line 81, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 88, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+sup {
+  top: -0.5em; }
+
+/* line 92, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+sub {
+  bottom: -0.25em; }
+
+/* line 96, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+img {
+  border: 0; }
+
+/* line 100, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 104, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+figure {
+  margin: 1em 0px; }
+  figure img {
+  	width: 100%;
+  }
+
+/* line 108, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/* line 113, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+pre {
+  overflow: auto; }
+
+/* line 120, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* line 129, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+/* line 135, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+button {
+  overflow: visible; }
+
+/* line 140, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+button, select {
+  text-transform: none; }
+
+/* line 147, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+/* line 153, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+/* line 158, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 163, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+input {
+  line-height: normal; }
+
+/* line 168, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/* line 174, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/* line 178, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+/* line 184, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 188, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/* line 194, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+legend {
+  border: 0;
+  padding: 0; }
+
+/* line 199, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+textarea {
+  overflow: auto; }
+
+/* line 203, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+optgroup {
+  font-weight: bold; }
+
+/* line 207, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 213, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/normalize */
+td, th {
+  padding: 0; }
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+/*------------------------------------*\
+    #BASE-BASE
+\*------------------------------------*/
+/* line 4, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+* {
+  box-sizing: border-box; }
+
+/* line 11, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+html, body {
+  font-size: 80%;
+  font-family: 'Noto Sans', Verdana, Arial, sans-serif;
+  line-height: 1.3;
+  color: #030303;
+  background-color: #fcfcfc;
+  margin: 0 auto;
+  padding: 0; }
+
+/* line 22, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+h1, h2 {
+  text-transform: uppercase;
+  margin: 0 0 10px 0; }
+
+/* line 28, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+h1 {
+  font-size: 1.4rem;
+  font-family: 'triplexitalicbold'; }
+
+/* line 33, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+h2 {
+  font-size: 1.2rem;
+  font-family: 'noto_sansbold_italic';
+  padding: 10px 0;
+  border-bottom: 1px solid #030303;
+  border-top: 1px solid #030303; }
+
+/* line 43, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+h3 {
+  font-family: 'Noto Sans';
+  font-size: 1rem;
+  padding: 0;
+  margin: 0; }
+
+/* line 50, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+a {
+  text-decoration: none;
+  color: #030303;
+  transition: all 0.3s ease; }
+  /* line 56, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+  a:hover {
+    cursor: pointer;
+    color: #ff3333; }
+  /* line 61, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+  a.hover:hover {
+    opacity: 0.8; }
+
+/* line 68, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+p {
+  font-size: 1rem;
+  padding: 0;
+  margin: 0; }
+
+/* line 74, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+/*.center {
+    text-align: center;
+    margin: auto;
+    float: none;
+}*/
+/*.selecta {
+    border-bottom: 1px solid $color__btn;
+    border-top: 1px solid $color__btn;
+
+    a{color: $color__btn}
+}*/
+@media screen and (min-width: 48em) {
+  /* line 98, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+  html {
+    font-size: 87.5%; }
+ }
+
+@media screen and (min-width: 62em) {
+  /* line 102, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+  html {
+    font-size: 100%; }
+ }
+
+@media screen and (min-width: 75em) {
+  /* line 106, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/base */
+  body {
+    max-width: 1280px; }
+ }
+
+/*------------------------------------*\
+    #BASE-FORM
+\*------------------------------------*/
+/* line 7, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/form */
+.article-newsletter form {
+  border-bottom: 1px solid #ff3333;
+  border-top: 1px solid #ff3333;
+  padding: 10px 0;
+  background-color: #fcfcfc; }
+/* line 15, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/form */
+.article-newsletter .email {
+  text-align: center; }
+/* line 18, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/form */
+.article-newsletter input[type="email"], .article-newsletter input[type="submit"] {
+  appearance: none;
+  box-shadow: none;
+  height: 32px; }
+/* line 24, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/form */
+.article-newsletter input[type="email"] {
+  font-family: 'Noto Sans';
+  font-size: 1rem;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  vertical-align: bottom;
+  transition: all 0.3s ease;
+  color: #ff3333;
+  background-color: #fcfcfc; }
+  /* line 43, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/form */
+  .article-newsletter input[type="email"]:focus, .article-newsletter input[type="email"]:hover {
+    background-color: #fcfcfc;
+    outline: none; }
+/* line 50, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/form */
+.article-newsletter label {
+  font-family: 'noto_sansbold';
+  font-size: 1rem;
+  color: #ff3333;
+  text-transform: uppercase; }
+/* line 59, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/form */
+.article-newsletter input[type="submit"] {
+  font-family: 'triplexitalicbold';
+  font-size: 1.2rem;
+  padding-top: 4px;
+  color: #fcfcfc;
+  background-color: #ff3333;
+  border: none;
+  border-radius: 50%;
+  transition: all 0.3s ease; }
+  /* line 72, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/form */
+  .article-newsletter input[type="submit"]:hover {
+    background-color: #fcfcfc;
+    cursor: pointer;
+    color: #ff3333; }
+/* line 80, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/form */
+.article-newsletter input::-webkit-input-placeholder, .article-newsletter input-moz::-webkit-input-placeholder {
+  font-family: 'noto_sansbold_italic';
+  font-size: 1rem;
+  text-align: left;
+  color: #ff3333;
+  opacity: 1; }
+.article-newsletter input::-moz-placeholder, .article-newsletter input-moz::-moz-placeholder {
+  font-family: 'noto_sansbold_italic';
+  font-size: 1rem;
+  text-align: left;
+  color: #ff3333;
+  opacity: 1; }
+.article-newsletter input:-ms-input-placeholder, .article-newsletter input-moz:-ms-input-placeholder {
+  font-family: 'noto_sansbold_italic';
+  font-size: 1rem;
+  text-align: left;
+  color: #ff3333;
+  opacity: 1; }
+.article-newsletter input::placeholder, .article-newsletter input-moz::placeholder {
+  font-family: 'noto_sansbold_italic';
+  font-size: 1rem;
+  text-align: left;
+  color: #ff3333;
+  opacity: 1; }
+
+@media screen and (min-width: 48em) {
+  /* line 96, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/form */
+  .article-newsletter form .email {
+    text-align: left; }
+  /* line 98, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/form */
+  .article-newsletter form label {
+    font-size: 1rem;
+    vertical-align: top;
+    margin: 7px auto 0 auto; }
+  /* line 105, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/base/form */
+  .article-newsletter input[type='email'] {
+    width: 85%; }
+ }
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+/*------------------------------------*\
+    #LAYOUT-PROGRAMMATION
+\*------------------------------------*/
+/* line 6, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+.aside-filtre {
+  margin-top: 15px; }
+  /* line 9, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .aside-filtre h3 {
+    margin-bottom: 15px; }
+  /* line 11, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .aside-filtre a {
+    font-size: 0.8rem;
+    margin-left: 3%; }
+  /* line 16, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .aside-filtre .radio {
+    position: relative;
+    font-size: 0.8rem;
+    color: #ff3333;
+    margin-bottom: 5px; }
+    /* line 22, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+    .aside-filtre .radio label {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #fcfcfc;
+      border: 1px solid #ff3333;
+      border-radius: 50%;
+      box-sizing: border-box; }
+      /* line 36, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+      .aside-filtre .radio label:hover:after {
+        width: 6px;
+        height: 6px;
+        top: 4px;
+        left: 4px;
+        opacity: 0.6; }
+      /* line 45, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+      .aside-filtre .radio label:after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #ff3333;
+        border-radius: 500px;
+        top: 2px;
+        left: 2px;
+        opacity: 0; }
+    /* line 59, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+    .aside-filtre .radio input[type="radio"] {
+      visibility: hidden;
+      vertical-align: top; }
+      /* line 65, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+      .aside-filtre .radio input[type="radio"]:checked + label:active {
+        border-color: #cc3333; }
+        /* line 67, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+        .aside-filtre .radio input[type="radio"]:checked + label:active:after {
+          background-color: #cc3333; }
+      /* line 72, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+      .aside-filtre .radio input[type="radio"]:checked + label:after {
+        opacity: 1; }
+      /* line 77, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+      .aside-filtre .radio input[type="radio"]:checked + label:hover:after {
+        width: 10px;
+        height: 10px;
+        top: 2px;
+        left: 2px;
+        opacity: 1; }
+
+/* line 95, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+.filtre-mois, .filtre-lieux {
+  margin: 15px auto;
+  vertical-align: top; }
+
+/* line 102, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+.filtre-mois li {
+  padding: 5px 0;
+  margin: 5px 0; }
+  /* line 107, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .filtre-mois li:hover {
+    padding: 4px 0;
+    margin: 4px 0;
+    border-top: 1px solid #ff3333;
+    border-bottom: 1px solid #ff3333; }
+    /* line 114, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+    .filtre-mois li:hover a {
+      color: #ff3333; }
+
+/* line 123, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+.article-programmation a {
+  font-family: 'triplexitalicbold';
+  text-transform: capitalize;
+  font-size: 1.2rem; }
+/* line 129, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+.article-programmation .evenement {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 47%;
+  padding: 0 0.625rem; }
+  /* line 138, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .article-programmation .evenement img, .article-programmation .evenement label, .article-programmation .evenement p {
+    display: block; }
+/* line 141, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+.article-programmation .zone-img {
+  height: 150px;
+  overflow: hidden; }
+  /* line 145, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .article-programmation .zone-img img {
+  	height: auto;
+    width: 100%; }
+/* line 150, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+.article-programmation label {
+  font-family: 'noto_sansbold_italic';
+  font-size: 0.8rem;
+  margin-top: 10px;
+  text-transform: uppercase;
+  vertical-align: top; }
+/* line 160, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+.article-programmation p {
+  margin-top: 5px;
+  font-family: 'Noto Sans'; }
+
+/* line 168, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+.Soul, .Concert, .Street {
+  text-align: center;
+  vertical-align: top;
+  /*margin-top: -10px;*/
+  padding: 10px; }
+  /* line 175, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .Soul:before, .Concert:before, .Street:before {
+    content: "";
+    position: absolute;
+    right: 0.625rem;
+    border-color: #ff3333 #fcfcfc;
+    border-style: solid;
+    border-width: 0px 30px 30px 0px;
+    height: 0px;
+    width: 0px;
+    display: block;
+    top: 0; }
+  /* line 189, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .Soul label, .Concert label, .Street label {
+    font-family: 'triplexitalicbold';
+    font-size: 1.6rem;
+    color: #ff3333;
+    line-height: 1;
+    padding-top: 10px; }
+  /* line 198, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .Soul h2, .Soul h4, .Concert h2, .Concert h4, .Street h2, .Street h4 {
+    color: #ff3333; }
+  /* line 202, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .Soul h4, .Concert h4, .Street h4 {
+    font-family: suzee;
+    margin: 0 0 10px 0;
+    padding: 0;
+    line-height: 1;
+    text-transform: capitalize;
+    font-size: 1.6rem; }
+  /* line 211, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .Soul h2, .Concert h2, .Street h2 {
+    font-family: 'triplexitalicbold';
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: #ff3333;
+    border: none;
+    margin: 0;
+    padding: 0;
+    line-height: 0.9; }
+  /* line 222, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .Soul h3, .Concert h3, .Street h3 {
+    font-weight: normal;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    line-height: 1.1;
+    color: #ff3333; }
+
+/* line 231, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+.Soul {
+  background: #ffffcc; }
+  /* line 234, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .Soul:before {
+    border-color: #ffcc33 #fcfcfc; }
+  /* line 241, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .Soul label, .Soul h2, .Soul h3, .Soul h4, .Soul a {
+    color: #ffcc33; }
+
+/* line 246, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+.Concert {
+  background: #fdebeb; }
+  /* line 249, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .Concert label, .Concert a {
+    color: #ff3333; }
+
+/* line 254, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+.Street {
+  background: #ebf6fb; }
+  /* line 257, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .Street:before {
+    border-color: #0288D1 #fcfcfc; }
+  /* line 264, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .Street label, .Street h2, .Street h3, .Street h4, .Street a {
+    color: #0288D1; }
+
+.past--event {
+	background-color: rgba(66,66,66,.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+}
+
+/* FRONT PAGE */
+.programmation .evenement {
+	position: relative;
+}
+
+.programmation .Concert::before,
+.programmation .Soul::before,
+.programmation .Street::before {
+	right: 0;
+	border-width: 0px 20px 20px 0px;
+}
+
+.programmation .zone-img {
+	height: auto;
+}
+
+.programmation .zone-img img {
+	width: 20px;
+}
+
+@media screen and (min-width: 48em) {
+  /* line 273, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .aside-filtre, .article-programmation {
+    vertical-align: top; }
+    /* line 277, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+    .aside-filtre .evenement, .article-programmation .evenement {
+      vertical-align: top;
+      width: 32%; }
+
+  /* line 283, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .aside-filtre a {
+    font-size: 1rem; }
+ }
+
+@media screen and (min-width: 75em) {
+  /* line 294, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+  .article-programmation .evenement {
+    width: 24%; }
+    /* line 297, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/programmation */
+    .article-programmation .evenement p {
+      font-size: 0.9rem; }
+ }
+
+/*------------------------------------*\
+    #LAYOUT-ARTISTE
+\*------------------------------------*/
+/* line 9, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/artiste */
+.article-artiste, .article-video {
+  vertical-align: top; }
+
+/* line 11, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/artiste */
+.zone-img {
+  overflow: hidden;
+  height: 200px;
+  margin-bottom: 15px; }
+  /* line 16, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/artiste */
+  .zone-img img {
+    width: 100%; }
+
+/* line 19, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/artiste */
+br {
+  font-size: 1rem; }
+
+/* line 21, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/artiste */
+h3 {
+  margin-bottom: 15px; }
+
+/* line 25, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/artiste */
+li {
+  font-size: 0.8rem; }
+
+/* line 27, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/artiste */
+p {
+  margin-bottom: 15px; }
+
+/*------------------------------------*\
+    #LAYOUT-LIEUX
+\*------------------------------------*/
+/* line 6, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+#map-canvas {
+  height: 400px;
+  margin-top: 15px; }
+
+/* line 13, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+.article-description h3 {
+  margin-bottom: 15px; }
+/* line 15, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+.article-description li {
+  font-size: 0.8rem; }
+  /* line 18, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+  .article-description li a {
+    transition: all 0.3s ease; }
+    /* line 21, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+    .article-description li a:hover {
+      color: #ff3333; }
+/* line 25, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+.article-description figure {
+  margin: 0; }
+  /* line 28, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+  .article-description figure img {
+    width: 100%; }
+  /* line 31, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+  .article-description figure img, .article-description figure figcaption {
+    margin-bottom: 15px; }
+
+/* line 37, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+.article-map .row {
+  padding-left: 5px; }
+/* line 39, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+.article-map .links {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ff3333; }
+  /* line 47, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+  .article-map .links a {
+    font-size: 0.8rem;
+    color: #ff3333; }
+  /* line 52, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+  .article-map .links:hover {
+    background-color: #ff3333; }
+    /* line 55, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+    .article-map .links:hover a {
+      color: #fcfcfc; }
+
+/* line 60, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+#coordonnees {
+  display: none; }
+
+@media screen and (min-width: 62em) {
+  /* line 64, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+  .article-map {
+    vertical-align: top; }
+    /* line 67, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/lieux */
+    .article-map a {
+      font-size: 0.8rem; }
+ }
+
+/*------------------------------------*\
+    #LAYOUT-CONTACT
+\*------------------------------------*/
+/* line 7, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/contact */
+#Container h1 {
+  margin-top: 35px; }
+/* line 11, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/contact */
+#Container #Partenaires {
+  vertical-align: top; }
+  /* line 14, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/contact */
+  #Container #Partenaires img {
+    width: 100%; }
+/* line 17, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/contact */
+#Container #Contact {
+  font-size: 0.8rem;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+/*------------------------------------*\
+    #LAYOUT-MENTIONS
+\*------------------------------------*/
+/* line 7, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/mentions */
+.mentions .mention {
+  padding: O;
+  margin: O; }
+/* line 13, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/mentions */
+.mentions h1 {
+  font-family: 'noto_sansbold';
+  text-align: left;
+  padding-top: 30px;
+  color: #ff3333;
+  font-size: 1.5rem; }
+/* line 21, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/mentions */
+.mentions h2 {
+  text-align: left;
+  padding-top: 15px; }
+/* line 26, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/mentions */
+.mentions p {
+  padding-bottom: 15px; }
+/* line 30, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/mentions */
+.mentions a {
+  margin-bottom: 30px; }
+
+/*------------------------------------*\
+    #LAYOUT-MAIN
+\*------------------------------------*/
+/* line 5, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+main {
+  overflow: hidden
+  /*	NEWSLETTER cf base/form */
+  /*APERCU PROG*/
+  /*	RELACHE  */
+  /*	BLOG  */
+  /*	GALERIE  */
+  /*	PLAYER ET INSTAGRAM LIVE  */ }
+  /* line 8, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main #Partenaires {
+    vertical-align: top; }
+  /* line 12, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main .h1 {
+    font-size: 1.4rem;
+    font-family: 'triplexitalicbold';
+    border: none;
+    padding: 0;
+    margin-top: -10px;
+    display: inline; }
+  /* line 22, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main article, main aside {
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 15px; }
+  /* line 28, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main .article-slider {
+    position: relative;
+    display: block; }
+  /* line 37, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main .programmation {
+    vertical-align: top; }
+    /* line 43, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+    main .programmation .zone-img:nth-child(4), main .programmation .zone-img:nth-child(6) {
+      display: none; }
+  /* line 51, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main .article-relache-hidden {
+    display: none; }
+  /* line 60, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main .article-blog .thumbnail, main .article-blog:nth-child(3) {
+    display: none; }
+  /* line 63, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main .head-info {
+    font-size: 0.9rem; }
+  /* line 69, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main .article-galerie {
+    padding: 0;
+    color: #030303; }
+    /* line 73, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+    main .article-galerie .galerie {
+      padding-bottom: 0.625em; }
+      /* line 76, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+      main .article-galerie .galerie .zone-img {
+        position: relative; }
+        /* line 81, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+        main .article-galerie .galerie .zone-img:hover .hover-img {
+          opacity: 0.6; }
+        /* line 83, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+        main .article-galerie .galerie .zone-img:hover p {
+          opacity: 1; }
+      /* line 88, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+      main .article-galerie .galerie p, main .article-galerie .galerie .hover-img {
+        position: absolute;
+        top: 0;
+        left: 0.625em;
+        right: 0.625em;
+        bottom: 0;
+        opacity: 0;
+        transition: all 0.3s ease; }
+      /* line 99, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+      main .article-galerie .galerie .hover-img {
+        z-index: 1; }
+        /* line 102, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+        main .article-galerie .galerie .hover-img.concert {
+          background-color: #fdebeb; }
+        /* line 103, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+        main .article-galerie .galerie .hover-img.dancing {
+          background-color: #ebf6fb; }
+        /* line 104, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+        main .article-galerie .galerie .hover-img.sieste {
+          background-color: #ffffcc; }
+      /* line 107, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+      main .article-galerie .galerie p {
+        font-family: 'triplexitalicbold';
+        font-size: 1rem;
+        text-align: center;
+        -webkit-transform: translateY(40%);
+            -ms-transform: translateY(40%);
+                transform: translateY(40%);
+        z-index: 2; }
+        /* line 116, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+        main .article-galerie .galerie p.concert {
+          color: #c01818; }
+        /* line 117, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+        main .article-galerie .galerie p.dancing {
+          color: #0288D1; }
+        /* line 118, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+        main .article-galerie .galerie p.sieste {
+          color: #8F6A00; }
+      /* line 122, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+      main .article-galerie .galerie .zone-img:nth-child(2), main .article-galerie .galerie .zone-img:nth-child(3) {
+        display: none; }
+      /* line 124, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+      main .article-galerie .galerie img {
+        width: 100%; }
+  /* line 132, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main aside {
+    padding: 0;
+    width: 100%; }
+    /* line 136, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+    main aside section {
+      margin-bottom: 25px; }
+    /* line 138, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+    main aside iframe {
+      margin-top: 5%; }
+  /* line 141, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main #instafeed {
+    text-align: center; }
+    /* line 144, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+    main #instafeed a {
+      display: none;
+      float: left;
+      overflow: hidden;
+      margin-top: 5%;
+      width: 50%; }
+    /* line 155, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+    main #instafeed a:first-child, main #instafeed a:nth-child(2), main #instafeed a:nth-child(3), main #instafeed a:nth-child(4) {
+      display: block; }
+      /* line 158, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+      main #instafeed a:first-child img, main #instafeed a:nth-child(2) img, main #instafeed a:nth-child(3) img, main #instafeed a:nth-child(4) img {
+        padding: 5px;
+        max-width: 100%; }
+
+/*============
+ *  Tablet   *
+ *===========*/
+@media only screen and (min-width: 48em) {
+  /* line 178, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main .article-galerie .galerie .zone-img:nth-child(2) {
+    display: inline-block; }
+  /* line 182, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main .article-blog {
+    margin: 15px 0; }
+    /* line 186, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+    main .article-blog:nth-child(3), main .article-blog .thumbnail {
+      display: block; }
+    /* line 188, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+    main .article-blog .thumbnail {
+      height: 120px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      padding-top: 20px; }
+      /* line 193, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+      main .article-blog .thumbnail img {
+        height: auto;
+        width: 100%;
+        -webkit-transform: translateY(-30%);
+            -ms-transform: translateY(-30%);
+                transform: translateY(-30%); }
+ }
+
+@media only screen and (min-width: 62em) {
+  /* line 209, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main .article-galerie .galerie .zone-img:nth-child(3) {
+    display: block; }
+  /* line 216, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/main */
+  main .programmation .zone-img:nth-child(4), main .programmation .zone-img:nth-child(6) {
+    display: block; }
+ }
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/* line 1, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+.logorelache {
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: end; }
+  /* line 5, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+  .logorelache img {
+    width: 80%; }
+
+/* line 11, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+.menu-social, .main-navigation {
+  display: none; }
+
+/* line 13, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+.menu-social {
+  position: absolute;
+  top: 90px;
+  right: 15px; }
+  /* line 18, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+  .menu-social ul {
+    text-align: center;
+    list-style: none; }
+    /* line 22, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+    .menu-social ul li {
+      padding: 5px 0 0 0; }
+      /* line 25, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+      .menu-social ul li a:before {
+        display: inline-block;
+        padding: 0 5px;
+        vertical-align: top;
+        font-family: 'Fontawesome';
+        font-size: 1rem;
+        color: #fcfcfc;
+        content: '\f0c0';
+        webkit-font-smoothing: antialiasing; }
+  /* line 38, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+  .menu-social .screen-reader-text {
+    clip: auto;
+    width: 20px;
+    height: 20px; }
+
+/* line 45, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+.main-navigation {
+  margin-top: 15px; }
+  /* line 48, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+  .main-navigation li {
+    vertical-align: top; }
+    /* line 51, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+    .main-navigation li a {
+      font-family: 'noto_sansbold';
+      font-size: 1rem; }
+    /* line 56, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+    .main-navigation li ul {
+      display: none; }
+    /* line 60, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+    .main-navigation li:hover ul {
+      display: block;
+      background-color: #fcfcfc; }
+      /* line 65, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+      .main-navigation li:hover ul li {
+        display: block;
+        padding-left: 5px;
+        padding-right: 5px; }
+        /* line 70, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+        .main-navigation li:hover ul li:last-child {
+          padding-bottom: 5px;
+          border-bottom: 1px solid #030303; }
+        /* line 75, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+        .main-navigation li:hover ul li a {
+          font-family: 'noto_sansbold'; }
+  /* line 81, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+  .main-navigation .menu {
+    margin-left: 20px; }
+
+@media screen and (min-width: 48em) {
+  /* line 85, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+  .menu-social {
+    position: static;
+    display: block; }
+    /* line 89, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+    .menu-social li {
+      display: inline-block; }
+      /* line 92, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+      .menu-social li .screen-reader-text {
+        position: static; }
+    .menu-social ul {
+    text-align: right;}
+
+  /* line 96, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+  .main-navigation {
+    display: block;
+    margin-top: 20px;
+    border-top: 1px solid #030303;
+    border-bottom: 1px solid #030303; }
+    /* line 103, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+    .main-navigation .menu-primary-menu-container {
+      display: inline-block;
+      width: 65%; }
+    /* line 108, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+    .main-navigation .menu {
+      position: static;
+      padding-top: 0;
+      margin-left: 0;
+      text-align: left; }
+      /* line 116, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+      .main-navigation .menu li {
+        display: inline-block;
+        padding: 10px 10px 10px 5px;
+        text-align: center;
+        position: relative; }
+        /* line 122, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+        .main-navigation .menu li ul {
+          position: absolute;
+          padding-top: 10px;
+          top: 30px;
+          z-index: 10;
+          left: -10px; }
+          /* line 128, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+          .main-navigation .menu li ul li {
+            padding: 5px 15px;
+            border: none;
+            text-align: left; }
+ }
+
+@media screen and (min-width: 62em) {
+  /* line 141, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+  .logorelache {
+    margin-left: 0 !important; }
+
+  /* line 143, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+  .menu-social .screen-reader-text {
+    clip: auto;
+    width: 30px;
+    height: 30px; }
+
+  /* line 149, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+  .menu-social ul li {
+    padding: 0 2.5px; }
+ }
+
+/* line 152, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+.navigation {
+  width: 100%; }
+
+/* line 160, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden; }
+/* line 165, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+/* line 170, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/navigation/menus */
+.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+/* line 2, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/accessibility */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  right: 0; }
+  /* line 10, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/accessibility */
+  .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #030303;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000
+    /* Above WP toolbar. */ }
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/* line 1, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/alignments */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em; }
+
+/* line 7, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/alignments */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em; }
+
+/* line 13, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/alignments */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media screen and (min-width: 1320px) {
+  /* line 21, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/alignments */
+  .alignleft {
+    margin-left: -160px; }
+ }
+
+@media screen and (min-width: 1820px) {
+  /* line 27, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/alignments */
+  .alignright {
+    margin-right: -160px; }
+ }
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/* line 52, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/mixins/mixins-master */
+.lt-ie8 .clear:before, .lt-ie8 .clear:after, .lt-ie8 .entry-content:before, .lt-ie8 .entry-content:after, .lt-ie8 .comment-content:before, .lt-ie8 .comment-content:after, .lt-ie8 .site-header:before, .lt-ie8 .site-header:after, .lt-ie8 .site-content:before, .lt-ie8 .site-content:after, .lt-ie8 .site-footer:before, .lt-ie8 .site-footer:after {
+  zoom: 1; }
+/* line 56, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/mixins/mixins-master */
+.clear:before:before, .clear:before:after, .clear:after:before, .clear:after:after, .entry-content:before:before, .entry-content:before:after, .entry-content:after:before, .entry-content:after:after, .comment-content:before:before, .comment-content:before:after, .comment-content:after:before, .comment-content:after:after, .site-header:before:before, .site-header:before:after, .site-header:after:before, .site-header:after:after, .site-content:before:before, .site-content:before:after, .site-content:after:before, .site-content:after:after, .site-footer:before:before, .site-footer:before:after, .site-footer:after:before, .site-footer:after:after {
+  content: "";
+  display: table; }
+/* line 60, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/mixins/mixins-master */
+.clear:before:after, .clear:after:after, .entry-content:before:after, .entry-content:after:after, .comment-content:before:after, .comment-content:after:after, .site-header:before:after, .site-header:after:after, .site-content:before:after, .site-content:after:after, .site-footer:before:after, .site-footer:after:after {
+  clear: both; }
+
+/* line 21, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/clearings */
+.clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after {
+  clear: both; }
+
+/*--------------------------------------------------------------
+# Ariane
+--------------------------------------------------------------*/
+/*------------------------------------*\
+    #MODULES-ARIANE
+\*------------------------------------*/
+/* line 5, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/ariane */
+.ariane {
+  position: relative;
+  z-index: 100;
+  font-size: 0.8rem;
+  margin-top: 30px; }
+  /* line 11, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/ariane */
+  .ariane ol {
+    padding: 0;
+    margin: 0; }
+    /* line 15, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/ariane */
+    .ariane ol li {
+      display: inline-block; }
+
+/*--------------------------------------------------------------
+# Buttons & Burger
+--------------------------------------------------------------*/
+/*------------------------------------*\
+    #MODULES-BUTTON
+\*------------------------------------*/
+/* line 5, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/btn */
+.btn {
+  display: inline-block;
+  text-align: left;
+  cursor: pointer;
+  margin: 5px auto 0 auto;
+  font-family: "noto_sansbold";
+  color: #ff3333;
+  font-size: 1rem; }
+  /* line 15, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/btn */
+  .btn:hover {
+    text-decoration: underline; }
+  /* line 19, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/btn */
+  .btn:active {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2); }
+
+/* line 24, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/btn */
+.btn-small {
+  font-size: 0.8rem; }
+
+/* line 28, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/btn */
+.btn-s {
+  width: 30%; }
+
+/* line 30, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/btn */
+.btn-sm {
+  width: 50%; }
+
+/* line 34, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/btn */
+.btn-md {
+  width: 60%; }
+
+/* line 38, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/btn */
+.btn-lg {
+  width: 80%; }
+
+/*------------------------------------*\
+    #MODULES-BURGER-PLUS
+\*------------------------------------*/
+/* line 5, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/burger */
+.burger {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  cursor: pointer;
+  z-index: 100;
+  height: 35px;
+  width: 35px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+  color: none;
+  font-size: 0;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none; }
+
+/*burger*/
+/* line 31, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/burger */
+.burger {
+  /*positionnement et dimensionnement de la span, et des éléments before et after*/ }
+  /* line 34, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/burger */
+  .burger span {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    right: 0px;
+    height: 6px;
+    background-color: #030303;
+    border-radius: 20%; }
+    /* line 45, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/burger */
+    .burger span::before, .burger span::after {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      content: "";
+      background-color: #030303;
+      border-radius: 20%;
+      transition-duration: 0.3s, 0.3s;
+      transition-delay: 0.3s, 0; }
+    /* line 60, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/burger */
+    .burger span::before {
+      top: -10px;
+      transition-property: top, -webkit-transform;
+      transition-property: top, transform; }
+    /* line 65, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/burger */
+    .burger span::after {
+      bottom: -10px;
+      transition-property: bottom, -webkit-transform;
+      transition-property: bottom, transform; }
+
+/*transformation du burger en plus*/
+/* line 75, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/burger */
+.burger.active span {
+  background: none; }
+
+/* line 79, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/burger */
+.burger.active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+/* line 84, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/burger */
+.burger.active span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+/* line 90, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/burger */
+.burger.active span::before, .burger.active span::after {
+  transition-delay: 0, 0.3s; }
+
+/*============
+ *  Desktop  *
+ *===========*/
+@media only screen and (min-width: 48em) {
+  /*disparition du burger*/
+  /* line 102, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/burger */
+  .burger {
+    display: none; }
+ }
+
+/*--------------------------------------------------------------
+# Clearings again
+--------------------------------------------------------------*/
+/* line 52, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/mixins/mixins-master */
+.lt-ie8 .clear:before, .lt-ie8 .clear:after, .lt-ie8 .entry-content:before, .lt-ie8 .entry-content:after, .lt-ie8 .comment-content:before, .lt-ie8 .comment-content:after, .lt-ie8 .site-header:before, .lt-ie8 .site-header:after, .lt-ie8 .site-content:before, .lt-ie8 .site-content:after, .lt-ie8 .site-footer:before, .lt-ie8 .site-footer:after {
+  zoom: 1; }
+/* line 56, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/mixins/mixins-master */
+.clear:before:before, .clear:before:after, .clear:after:before, .clear:after:after, .entry-content:before:before, .entry-content:before:after, .entry-content:after:before, .entry-content:after:after, .comment-content:before:before, .comment-content:before:after, .comment-content:after:before, .comment-content:after:after, .site-header:before:before, .site-header:before:after, .site-header:after:before, .site-header:after:after, .site-content:before:before, .site-content:before:after, .site-content:after:before, .site-content:after:after, .site-footer:before:before, .site-footer:before:after, .site-footer:after:before, .site-footer:after:after {
+  content: "";
+  display: table; }
+/* line 60, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/mixins/mixins-master */
+.clear:before:after, .clear:after:after, .entry-content:before:after, .entry-content:after:after, .comment-content:before:after, .comment-content:after:after, .site-header:before:after, .site-header:after:after, .site-content:before:after, .site-content:after:after, .site-footer:before:after, .site-footer:after:after {
+  clear: both; }
+
+/* line 21, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/clearings */
+.clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after {
+  clear: both; }
+
+/*--------------------------------------------------------------
+# Search form
+--------------------------------------------------------------*/
+/*------------------------------------*\
+    #MODULES-FORM-SEARCH
+\*------------------------------------*/
+/* line 5, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/form-search */
+.search-container {
+  display: block;
+  width: 100%;
+  margin-left: 20px; }
+
+/* line 10, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/form-search */
+.search {
+  position: relative;
+  top: -6px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 20px 0 0 0;
+  border: 3px solid #030303;
+  border-radius: 25px;
+  transition: all 200ms ease;
+  cursor: text; }
+  /* line 25, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/form-search */
+  .search:after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 10px;
+    right: -4px;
+    top: 12px;
+    background: #030303;
+    border-radius: 3px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    transition: all 200ms ease; }
+  /* line 40, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/form-search */
+  .search.active {
+    width: 250px;
+    height: 25px;
+    margin-right: 0px;
+    margin-bottom: -5px;
+    top: -9px; }
+    /* line 47, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/form-search */
+    .search.active:after {
+      height: 0px; }
+  /* line 52, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/form-search */
+  .search input {
+    font-family: 'Noto Sans';
+    font-size: 1rem;
+    color: #030303;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    background: transparent;
+    outline-width: 0px;
+    box-shadow: none;
+    border: none;
+    text-align: center; }
+    /* line 68, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/form-search */
+    .search input:focus::-webkit-input-placeholder {
+      opacity: 1; }
+    .search input:focus::-moz-placeholder {
+      opacity: 1; }
+    .search input:focus:-ms-input-placeholder {
+      opacity: 1; }
+    .search input:focus::placeholder {
+      opacity: 1; }
+    /* line 70, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/form-search */
+    .search input::-webkit-input-placeholder {
+      font-size: 0.8rem;
+      color: #030303;
+      opacity: 0; }
+    /* line 76, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/form-search */
+    .search input:-moz-placeholder {
+      /* Firefox 18- */
+      font-size: 0.8rem;
+      color: #030303;
+      opacity: 0; }
+    /* line 82, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/form-search */
+    .search input::-moz-placeholder {
+      /* Firefox 19+ */
+      font-size: 0.8rem;
+      color: #030303;
+      opacity: 0; }
+    /* line 88, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/form-search */
+    .search input:-ms-input-placeholder {
+      color: #030303;
+      opacity: 0; }
+
+@media screen and (min-width: 48em) {
+  /* line 98, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/form-search */
+  .search-container {
+    display: inline-block;
+    width: 20%;
+    vertical-align: bottom;
+    margin-bottom: 5px; }
+
+  /* line 105, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/form-search */
+  .main-navigation .search {
+    margin-top: 15px; }
+ }
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+/*------------------------------------*\
+    #LAYOUT-HEADER
+\*------------------------------------*/
+/* line 6, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/header */
+header {
+  position: relative;
+  margin-bottom: 30px; }
+
+/* line 12, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/header */
+.logoalf, .don {
+  display: none; }
+  /* line 14, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/header */
+  .logoalf img, .don img {
+    width: 100%; }
+
+/*============
+ *  Tablet   *
+ *===========*/
+@media only screen and (min-width: 48em) {
+  /* line 27, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/header */
+  header {
+    position: relative;
+    z-index: 10;
+    padding: 25px 0 0 0;
+    background-color: transparent; }
+
+  /* line 34, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/header */
+  .h1 {
+    margin-top: 0; }
+
+  /* line 38, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/header */
+  .logorelache img {
+    width: 100%; }
+
+  /*on enlève la position absolute de la barre de réseaux
+	et on la positionne à sa place définitive*/
+  /* line 43, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/header */
+  .reseaux {
+    position: static;
+    padding: 0;
+    margin-right: 10px;
+    text-align: right; }
+
+  /* line 51, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/header */
+  .logoalf, .don {
+    display: block; }
+
+  /* line 53, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/header */
+  .don {
+    margin-top: 10px;
+    display: none; }
+ }
+
+/*=============
+ *  Desktop   *
+ *============*/
+@media only screen and (min-width: 62em) {
+  /* line 69, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/header */
+  header .logorelache {
+    text-align: left; }
+    /* line 72, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/header */
+    header .logorelache img {
+      width: 90%; }
+ }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+/* line 1, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/footer */
+.site-footer {
+  padding: 2em;
+  font-family: 'noto_sansbold', sans-serif;
+  font-size: 0.5rem;
+  color: white;
+  background-color: #2f2f2f; }
+  /* line 8, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/footer */
+  .site-footer .widget a {
+    color: white; }
+  /* line 10, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/footer */
+  .site-footer .site-info {
+    text-align: center; }
+
+/*------------------------------------*\
+    #LAYOUT-FOOTER
+\*------------------------------------*/
+/* line 20, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/footer */
+footer .foot {
+  padding: 2% 0;
+  border-top: 1px solid #030303; }
+/* line 26, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/footer */
+footer a {
+  font-size: 0.8rem;
+  margin: 0;
+  text-align: left;
+  padding-top: 2.5px; }
+  /* line 32, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/footer */
+  footer a:hover {
+    color: #ff3333; }
+  /* line 37, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/layout/footer */
+  footer a.back-to-top {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 30px;
+    opacity: 1; }
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/* line 1, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/secondary/widgets */
+.widget {
+  margin: 0 0 1em;
+  font-family: 'Noto Sans';
+  font-size: 1rem
+  /* Make sure select elements fit in widgets. */ }
+  /* line 6, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/secondary/widgets */
+  .widget a {
+    font-weight: 700;
+    color: black; }
+  /* line 12, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/secondary/widgets */
+  .widget select {
+    max-width: 100%; }
+  /* line 17, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/secondary/widgets */
+  .widget ul, .widget ol {
+    padding: 0;
+    margin: -1em 0 0;
+    list-style-type: none; }
+  /* line 23, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/secondary/widgets */
+  .widget li {
+    padding: 1em 0 0; }
+    /* line 27, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/secondary/widgets */
+    .widget li ul, .widget li ol {
+      margin-top: 0; }
+    /* line 29, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/secondary/widgets */
+    .widget li li {
+      margin-left: 1.5em; }
+
+/* Search widget. */
+/* line 34, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/secondary/widgets */
+.widget_search .search-submit {
+  display: none; }
+
+/* line 38, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/secondary/widgets */
+.widget-title {
+  margin-bottom: 1em;
+  font-size: 1rem;
+  border-bottom: 2px solid black; }
+
+/* line 46, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/secondary/widgets */
+.widget_calendar th, .widget_calendar td {
+  text-align: center; }
+
+/* line 49, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/secondary/widgets */
+.footer-widgets {
+  margin: 0 auto; }
+  /* line 53, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/secondary/widgets */
+  .footer-widgets .widget-title, .footer-widgets .widget a:hover {
+    color: white;
+    border-color: white; }
+  /* line 58, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/secondary/widgets */
+  .footer-widgets .widget {
+    float: left;
+    width: 320px;
+    margin: 0 4rem 8rem 4rem; }
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+/* line 1, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+.screen-reader-text {
+  margin: 0;
+  padding: 0; }
+
+/* line 6, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+.sticky {
+  display: block; }
+
+/* line 10, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+.hentry {
+  margin: 0 0 1.5em; }
+
+/* line 15, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+.single .byline, .group-blog .byline {
+  display: inline; }
+
+/* line 20, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
+/* line 26, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+.post-edit-link:after {
+  font-family: 'FontAwesome';
+  font-size: 1rem;
+  content: '\f040';
+  color: #ff3333; }
+
+/* line 34, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+.thumbnail {
+  height: 70px;
+  overflow: hidden;
+  margin-bottom: 10px; }
+  /* line 39, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+  .thumbnail img {
+    width: 100%;
+    height: auto;
+    -webkit-transform: translateY(-20%);
+        -ms-transform: translateY(-20%);
+            transform: translateY(-20%); }
+
+/* line 47, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+.thumbnail, .entry-content {
+  vertical-align: top; }
+
+/* line 49, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+.entry-header {
+  margin: 0;
+  padding: 0; }
+
+/* line 54, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+.entry-meta {
+  margin-bottom: 5px; }
+
+@media screen and (min-width: 48em) {
+  /* line 66, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+  .thumbnail {
+    height: 100px;
+    overflow: hidden; }
+    /* line 70, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+    .thumbnail .larger-width {
+      height: 100%;
+      width: auto; }
+    /* line 75, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+    .thumbnail .larger-height {
+      width: 100%;
+      height: auto; }
+ }
+
+@media screen and (min-width: 800px) {
+  /* line 86, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+  .thumbnail img {
+    width: 100%;
+    height: auto; }
+
+  /* line 92, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+  #secondary {
+    margin-top: 15px; }
+ }
+
+@media screen and (min-width: 1320px) {
+  /* line 100, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+  .single .entry-meta {
+    width: 120px;
+    margin-left: -160px;
+    float: left;
+    text-align: right; }
+  /* line 108, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/posts-and-pages */
+  .single .byline, .single .posted-on {
+    display: block;
+    margin-bottom: 1em; }
+ }
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+/* line 2, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/asides */
+.blog .format-aside .entry-title, .archive .format-aside .entry-title {
+  display: none; }
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+/* line 1, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/comments */
+.comment-content a {
+  word-wrap: break-word; }
+
+/* line 4, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/site/primary/comments */
+.bypostauthor {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+/* line 3, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/infinite-scroll */
+.infinite-scroll .posts-navigation, .infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none; }
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+/* line 8, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/modules/infinite-scroll */
+.infinity-end.neverending .site-footer {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/* line 3, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/media */
+.page-content .wp-smiley, .entry-content .wp-smiley, .comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+/* Make sure embeds and iframes fit their containers. */
+/* line 13, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/media */
+embed, iframe, object {
+  max-width: 100%; }
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+/* line 1, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/captions */
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%; }
+  /* line 5, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/captions */
+  .wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  /* line 9, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/captions */
+  .wp-caption .wp-caption-text {
+    padding: 0.8075em 0;
+    font-size: 14px;
+    background-color: grey; }
+
+/* line 16, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/captions */
+.wp-caption-text {
+  text-align: center; }
+
+/* line 20, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/captions */
+.gallery-caption {
+  padding: 0.8075em 0;
+  font-size: 14px;
+  background-color: grey; }
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+/* line 1, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/galleries */
+.gallery {
+  margin-bottom: 1.5em; }
+
+/* line 5, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/galleries */
+.gallery-item {
+  position: relative;
+  margin-right: 3.33%;
+  margin-bottom: 3rem;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+  background-color: black;
+  overflow: hidden; }
+  /* line 16, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/galleries */
+  .gallery-columns-2 .gallery-item {
+    max-width: 50%; }
+  /* line 20, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/galleries */
+  .gallery-columns-3 .gallery-item {
+    max-width: 33.33%; }
+  /* line 24, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/galleries */
+  .gallery-columns-4 .gallery-item {
+    max-width: 25%; }
+  /* line 28, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/galleries */
+  .gallery-columns-5 .gallery-item {
+    max-width: 20%; }
+  /* line 32, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/galleries */
+  .gallery-columns-6 .gallery-item {
+    max-width: 16.66%; }
+  /* line 36, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/galleries */
+  .gallery-columns-7 .gallery-item {
+    max-width: 14.28%; }
+  /* line 40, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/galleries */
+  .gallery-columns-8 .gallery-item {
+    max-width: 12.5%; }
+  /* line 44, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/galleries */
+  .gallery-columns-9 .gallery-item {
+    max-width: 11.11%; }
+
+/* line 49, C:/Users/Bernard Pagoaga/Dropbox/Projets/Relache/sass/media/galleries */
+.gallery-caption {
+  display: block; }
+/*# sourceMappingURL=style.css.map */

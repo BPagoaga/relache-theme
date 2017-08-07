@@ -1,0 +1,117 @@
+.screen-reader-text {
+	margin: 0;
+	padding: 0;
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.post-edit-link {
+	&:after {
+		font-family: 'FontAwesome';
+		font-size: 1rem;
+		content: '\f040';
+		color: $color__link-hover;
+	}
+}
+
+.thumbnail {
+	height: 70px;
+	overflow: hidden;
+	margin-bottom: 10px;
+
+	img {
+		width: 100%;
+		height: auto;
+		transform: translateY(-20%);
+	}
+}
+
+.thumbnail,
+.entry-content {vertical-align: top;}
+
+.entry-header {
+	margin: 0;
+	padding: 0;
+}
+
+.entry-meta {margin-bottom: 5px;}
+
+
+// Add smaller fonts for smaller screens
+//
+// Style the meta content .entry-meta, .entre-footer, etc
+//
+// Making the meta output responsive
+//
+
+@media screen and (min-width: $width-small) {
+
+	.thumbnail {
+		height: 100px;
+		overflow: hidden;
+
+		.larger-width {
+			height: 100%;
+			width: auto;
+		}
+
+		.larger-height {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+}
+
+@media screen and (min-width: 800px) {
+	.thumbnail {
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	#secondary {
+		margin-top: 15px;
+	}
+}
+
+
+@media screen and(min-width: 1320px) {
+	.single {
+		.entry-meta {
+			width: 120px;
+			margin-left: -160px;
+			float: left;
+			text-align: right;
+		}
+
+		.byline,
+		.posted-on {
+			display: block;
+			margin-bottom: 1em;
+		}
+	}
+}
+
+@media screen and (max-width: 1319px) {
+
+}

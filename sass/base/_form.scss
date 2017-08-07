@@ -1,0 +1,118 @@
+/*------------------------------------*\
+    #BASE-FORM
+\*------------------------------------*/
+
+.article-newsletter {
+
+    form {
+
+        border-bottom: 1px solid $color__btn;
+        border-top: 1px solid $color__btn;
+        padding: 10px 0;
+        background-color: $color__background-body;
+    }
+
+    .email {text-align: center;}
+
+    input[type="email"],
+    input[type="submit"] {
+        appearance: none;
+        box-shadow: none;
+        height: 32px;
+    }
+
+    input[type="email"] {
+        font-family: $font-family__main;
+        font-size: $font-size__label;
+        appearance: none;
+        box-shadow: none;
+        border: none;
+
+
+        padding: 0;
+        vertical-align: bottom;
+
+        transition: all 0.3s ease;
+
+        color: $color__btn;
+
+        background-color: $color__background-body;
+
+
+        &:focus,
+        &:hover {
+            background-color: $color__background-body;
+            outline: none;
+
+        }
+    }
+
+    label {
+        font-family: $font-family__menu-item;
+        font-size: $font-size__label;
+
+        color: $color__label;
+
+        text-transform: uppercase;
+    }
+
+    input[type="submit"] {
+        font-family: $font-family__h1;
+        font-size: 1.2rem;
+
+        padding-top: 4px;
+
+        color: $color__background-body;
+        background-color: $color__btn;
+        border: none;
+        border-radius: 50%;
+
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $color__background-body;
+            cursor: pointer;
+            color: $color__btn;
+        }
+    }
+
+    input::placeholder,
+    input-moz::placeholder {
+        font-family: $font-family__h2;
+        font-size: 1rem;
+        text-align: left;
+
+        color: $color__btn;
+        opacity: 1;
+    }
+}
+
+
+@media screen and (min-width: $width-small) {
+
+    .article-newsletter {
+
+        form {
+            .email {text-align: left;}
+
+            label {
+                font-size: 1rem;
+
+                vertical-align: top;
+                margin: 7px auto 0 auto;}
+        }
+
+        input[type='email']{
+            width: 85%;
+        }
+    }
+}
+
+@media screen and (min-width: $width-large) {
+
+    .article-newsletter {}
+
+}
+
+
+

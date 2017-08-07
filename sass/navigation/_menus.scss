@@ -1,0 +1,178 @@
+.logorelache {
+	justify-content: flex-end;
+	text-align: end;
+
+	img {
+		width: 80%;
+	}
+}
+
+.menu-social,
+.main-navigation {display: none;}
+
+.menu-social {
+	position: absolute;
+	top: 90px;
+	right: 15px;
+
+	ul {
+		text-align: center;
+		list-style: none;
+
+		li {
+			padding: 5px 0 0 0;
+
+			a:before {
+				display: inline-block;
+				padding: 0 5px;
+				vertical-align: top;
+				font-family: 'Fontawesome';
+				font-size: $font-size__menu-item;
+				color: $color__background-body;
+				content: '\f0c0';
+				webkit-font-smoothing: antialiasing;
+			}
+		}
+	}
+
+	.screen-reader-text {
+		clip: auto;
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.main-navigation {
+	margin-top: 15px;
+
+	li {
+		vertical-align: top;
+
+		a {
+			font-family: $font-family__menu-item;
+			font-size: $font-size__menu-item;
+		}
+
+		ul {display: none;}
+
+		&:hover {
+
+			ul {
+				display: block;
+
+				background-color: $color__background-body;
+
+				li {
+					display: block;
+					padding-left: 5px;
+					padding-right: 5px;
+
+					&:last-child {
+						padding-bottom: 5px;
+						border-bottom: 1px solid $color__text-main;
+					}
+
+					a {font-family: $font-family__menu-item;}
+				}
+			}
+		}
+	}
+
+	.menu {margin-left: 20px;}
+}
+
+@media screen and (min-width: $width-small) {
+	.menu-social {
+		position: static;
+		display: block;
+
+		li {
+			display: inline-block;
+
+			.screen-reader-text {position: static;}
+		}
+	}
+
+	.main-navigation {
+		display: block;
+		margin-top: 20px;
+
+		border-top: 1px solid $color__text-main;
+		border-bottom: 1px solid $color__text-main;
+
+		.menu-primary-menu-container {
+			display: inline-block;
+			width: 65%;
+		}
+
+		.menu {
+			position: static;
+
+			padding-top: 0;
+			margin-left: 0;
+
+			text-align: left;
+
+			li {
+				display: inline-block;
+				padding: 10px 10px 10px 5px;
+				text-align: center;
+				position: relative;
+
+				ul {
+					position: absolute;
+					padding-top: 10px; //manip pour éviter que le sous-menu ne se referme quand on passe la souris dessus trop lentement
+					top: 30px;
+					left: 0;
+
+					li {
+						padding: 0;
+						border: none;
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $width-medium) {
+
+	.logorelache {margin-left: 0!important;}
+
+	.menu-social .screen-reader-text {
+		clip: auto;
+		width: 30px;
+		height: 30px;
+	}
+
+	.menu-social ul li {padding: 0 2.5px;}
+}
+
+.navigation {
+	width: 100%;
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+
+

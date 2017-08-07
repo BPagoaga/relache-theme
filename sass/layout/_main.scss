@@ -1,0 +1,223 @@
+/*------------------------------------*\
+    #LAYOUT-MAIN
+\*------------------------------------*/
+
+main {
+	overflow: hidden;
+
+    #Partenaires{
+    	vertical-align: top;
+    }
+
+    .h1 {
+		font-size: $font-size__h1;
+		font-family: $font-family__h1;
+		border: none;
+		padding: 0;
+		margin-top: -10px;
+		display: inline;
+	}
+
+    article,
+    aside {
+    	padding: 0;
+    	margin-top: 15px;
+    	margin-bottom: 15px;
+    }
+
+	.article-slider {
+		position: relative;
+		display: block;
+	}
+
+	/*	NEWSLETTER cf base/form */
+
+	/*APERCU PROG*/
+
+	.programmation {
+		vertical-align: top;
+
+		.zone-img {
+
+			&:nth-child(4),
+			&:nth-child(6) {
+				display: none;
+			}
+		}
+	}
+
+	/*	RELACHE  */
+
+	.article-relache-hidden {
+		display: none;
+	}
+
+	/*	BLOG  */
+
+	.article-blog {
+
+		.thumbnail,
+		&:nth-child(3) {display: none;}
+	}
+
+	.head-info {
+		font-size: $font-size__head-info;
+	}
+
+	/*	GALERIE  */
+
+	.article-galerie {
+		padding: 0;
+		color: $color__text-main;
+
+		.galerie {
+			padding-bottom: $gutter * 0.5;
+
+			.zone-img {
+				position: relative;
+
+				&:hover {
+
+					.hover-img {opacity: .6;}
+
+					p {opacity: 1;}
+				}
+			}
+
+			p,
+			.hover-img {
+				position: absolute;
+				top: 0;
+				left: $gutter * 0.5;
+				right: $gutter * 0.5;
+				bottom: 0;
+
+				opacity: 0;
+				transition: all 0.3s ease;
+			}
+
+			.hover-img {
+				z-index: 1;
+
+				&.concert {background-color: $color__background-concert;}
+				&.dancing {background-color: $color__background-dancing;}
+				&.sieste {background-color: $color__background-sieste;}
+			}
+
+			p {
+				font-family: 'triplexitalicbold';
+				font-size: 1rem;
+
+				text-align: center;
+
+				transform: translateY(40%);
+				z-index: 2;
+
+				&.concert {color: $color__text-concert-hover;}
+				&.dancing {color: $color__text-dancing;}
+				&.sieste {color: $color__text-sieste-hover;}
+			}
+
+			.zone-img:nth-child(2),
+			.zone-img:nth-child(3) {display: none;}
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	/*	PLAYER ET INSTAGRAM LIVE  */
+
+	aside {
+		padding: 0;
+		width: 100%;
+
+		section {margin-bottom: 25px;}
+
+		iframe {margin-top: 5%;}
+	}
+
+	#instafeed { //on n'affiche que deux photos en mode mobile
+		text-align: center; //centrage des liens
+
+		a {
+			display: none;
+			float: left;
+			overflow: hidden;
+			margin-top: 5%;
+			width: 50%;
+		}
+
+		a:first-child,
+		a:nth-child(2),
+		a:nth-child(3),
+		a:nth-child(4) {
+			display: block;	//centrage et retaillage des images
+
+			img {
+				padding: 5px;
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+
+
+/*============
+ *  Tablet   *
+ *===========*/
+
+@media only screen and (min-width: $width-small) {
+
+	main {
+
+		.article-galerie {
+			.galerie {
+				.zone-img:nth-child(2) {display: inline-block;}
+			}
+		}
+
+		.article-blog {
+			margin: 15px 0;
+
+			&:nth-child(3),
+			.thumbnail {display: block;}
+
+			.thumbnail {
+				height: 100px;
+				overflow: hidden;
+				margin-bottom: 10px;
+
+				img {
+					height: auto;
+					width: 100%;
+					transform: translateY(-30%);
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $width-medium) {
+
+	main {
+
+		.article-galerie {
+			.galerie {
+				.zone-img:nth-child(3) {display: block;}
+			}
+		}
+
+		.programmation .zone-img {
+
+			&:nth-child(4),
+			&:nth-child(6) {
+				display: block;
+			}
+		}
+	}
+}
+
+

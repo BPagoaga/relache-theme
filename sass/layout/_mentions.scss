@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    #LAYOUT-MENTIONS
+\*------------------------------------*/
+
+.mentions {
+
+	.mention{
+		padding: O;
+		margin: O;
+	}
+
+
+	h1 {
+		font-family: $font-family__menu-item;
+		text-align: left;
+		padding-top:30px;
+		color: $color__link-hover;
+		font-size: 1.5rem;
+	}
+
+	h2 {
+		text-align: left;
+		padding-top: 15px;
+	}
+
+	p{
+		padding-bottom:15px;
+	}
+
+	a{
+		margin-bottom: 30px;
+	}
+}

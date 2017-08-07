@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    #LAYOUT-HEADER
+\*------------------------------------*/
+
+
+header {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.logoalf,
+.don {
+	display: none;
+	img {width: 100%;}
+}
+
+
+
+
+
+/*============
+ *  Tablet   *
+ *===========*/
+
+@media only screen and (min-width: $width-small) {
+
+	header {
+		position: relative;
+		z-index: 10;	//pour permettre l'affichage des sous-menu, sinon le main passe par-dessus les li, et l'effet de hover ne marche plus
+		padding: 25px 0 0 0;
+		background-color: transparent;
+	}
+
+	.h1 {margin-top: 0;}
+
+	.logorelache {
+
+		img {width: 100%;}
+	}
+
+	/*on enlève la position absolute de la barre de réseaux
+	et on la positionne à sa place définitive*/
+	.reseaux {
+		position: static;
+		padding: 0;
+		margin-right: 10px;
+		text-align: right;
+	}
+
+	.logoalf,
+	.don {display: block;}
+
+	.don {
+		margin-top: 10px;
+		display: none;// tant que le paypal n'existe pas;
+	}
+}
+
+
+
+/*=============
+ *  Desktop   *
+ *============*/
+
+@media only screen and (min-width:$width-medium) {
+
+	header {
+
+		.logorelache {
+			text-align: left;
+
+			img {width: 90%;}
+		}
+
+	}
+}
+
+
+
+
+
